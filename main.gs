@@ -9,7 +9,7 @@ function main() {
     
     rows.slice(1).forEach(columns => {
       console.log(columns[1]);
-      GmailApp.sendEmail(columns[1], "test", 'HTMLメールが表示できません。', {
+      GmailApp.sendEmail(columns[1], prop.SUBJECT, 'HTMLメールが表示できません。', {
         from: prop.MSG_FROM,
         noReply: true,
         htmlBody: tmpl.evaluate().getContent(),
